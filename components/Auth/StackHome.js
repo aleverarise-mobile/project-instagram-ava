@@ -4,7 +4,7 @@ import Author from './Profile'
 import Publication from './Publication'
 import Comments from './Comments'
 
-const Home = StackNavigator({
+const StackHome = StackNavigator({
     Home: {
         screen: Home
     },
@@ -15,8 +15,8 @@ const Home = StackNavigator({
         screen: Publication
     },
     Comments:{
-        screen: Comments
+        screen: Comments,
     }
 })
 
-export { Home }
+export { StackHome }

@@ -1,13 +1,22 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 // create a component
 class Publication extends Component {
     render() {
+        const { navigation } = this.props
         return (
             <View style={styles.container}>
                 <Text>Publication</Text>
+                <Button 
+                    title="Back"
+                    onPress={ () => { navigation.goBack() }}
+                />
+                <Button 
+                    title="Comments"
+                    onPress={ () => { navigation.navigate('Comments') }}
+                />
             </View>
         );
     }

@@ -1,22 +1,22 @@
 import { TabNavigator } from 'react-navigation'
-import Home from './Home';
-import Search from './Search';
+import { StackHome } from './StackHome';
+import { StackSearch } from './StackSearch';
+import { stackFollow } from './StackFollow';
 import Add from './Add';
-import Follow from './Follow';
 import Profile from './Profile';
 
 const Logged = TabNavigator({
     Home:{
-        screen: Home
+        screen: StackHome,
     },
     Search: {
-        screen: Search
+        screen: StackSearch
     },
     Add: {
         screen: Add
     },
     Follow: {
-        screen: Follow
+        screen: stackFollow
     },
     Profile: {
         screen: Profile
