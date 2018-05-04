@@ -1,7 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { Guest } from './components/Guest/Guest'
-import { Logged } from './components/Auth/Logged';
+import { Logged } from './components/Auth/Logged'
+import { Provider } from 'react-redux'
+import Store from './store/Store'
 
 console.disableYellowBox = ['Remote debugger']
 
@@ -9,7 +11,9 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Logged/>
+				<Provider store={Store} >
+					<Guest/>
+				</Provider>
 			</View>
 		);
 	}
